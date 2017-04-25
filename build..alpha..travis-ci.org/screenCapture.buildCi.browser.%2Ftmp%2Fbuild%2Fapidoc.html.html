@@ -1,0 +1,1076 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/kwhitley/treeize#readme">treeize (v2.0.2)</a>
+</h1>
+<h4>Converts tabular row data (as from SQL joins, flat JSON, etc) to deep object graphs based on simple column naming conventions - without the use of an ORM or models.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.treeize">module treeize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize">
+            function <span class="apidocSignatureSpan"></span>treeize
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable">
+            function <span class="apidocSignatureSpan">treeize.</span>treeize_stable
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">treeize.</span>treeize_stable.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.treeize.treeize_stable">module treeize.treeize_stable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.treeize_stable">
+            function <span class="apidocSignatureSpan">treeize.</span>treeize_stable
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.treeize.treeize_stable.prototype">module treeize.treeize_stable.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.clearSignature">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>clearSignature
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.getData">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>getData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.getOptions">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>getOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.getSignature">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>getSignature
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.getStats">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>getStats
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.grow">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>grow
+            <span class="apidocSignatureSpan">(data, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.log">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.options">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>options
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.resetOptions">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>resetOptions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.setOptions">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>setOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.setSignature">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>setSignature
+            <span class="apidocSignatureSpan">(row, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.setSignatureAuto">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>setSignatureAuto
+            <span class="apidocSignatureSpan">(row, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.signature">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>signature
+            <span class="apidocSignatureSpan">(row, options, auto)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.treeize.treeize_stable.prototype.toString">
+            function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.treeize" id="apidoc.module.treeize">module treeize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize" id="apidoc.element.treeize.treeize">
+        function <span class="apidocSignatureSpan"></span>treeize
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Treeize(options) {
+  this.baseOptions = {
+    input: {
+      delimiter:          ':',
+      detectCollections:  true,
+      uniformRows:        false,
+    },
+    output: {
+      prune:              true,
+      objectOverwrite:    true,
+      resultsAsObject:    false,
+    },
+    log:                  false,
+  };
+
+  this.data = {
+    signature: {
+      nodes: [],
+      type: null,
+    },
+    seed: [],
+    tree: [],
+  };
+
+  this.stats = {
+    time:     {
+      total:      0,
+      signatures: 0,
+    },
+    rows:         0,
+    sources:      0,
+  };
+
+  // set default options (below)
+  this.resetOptions();
+
+  if (options) {
+    this.options(options);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable" id="apidoc.element.treeize.treeize_stable">
+        function <span class="apidocSignatureSpan">treeize.</span>treeize_stable
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Treeize(options) {
+  this.baseOptions = {
+    input: {
+      delimiter:          ':',
+      detectCollections:  true,
+      uniformRows:        false,
+    },
+    output: {
+      prune:              true,
+      objectOverwrite:    true,
+      resultsAsObject:    false,
+    },
+    log:                  false,
+  };
+
+  this.data = {
+    signature: {
+      nodes: [],
+      type: null,
+    },
+    seed: [],
+    tree: [],
+  };
+
+  this.stats = {
+    time:     {
+      total:      0,
+      signatures: 0,
+    },
+    rows:         0,
+    sources:      0,
+  };
+
+  // set default options (below)
+  this.resetOptions();
+
+  if (options) {
+    this.options(options);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.treeize.treeize_stable" id="apidoc.module.treeize.treeize_stable">module treeize.treeize_stable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.treeize_stable" id="apidoc.element.treeize.treeize_stable.treeize_stable">
+        function <span class="apidocSignatureSpan">treeize.</span>treeize_stable
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Treeize(options) {
+  this.baseOptions = {
+    input: {
+      delimiter:          ':',
+      detectCollections:  true,
+      uniformRows:        false,
+    },
+    output: {
+      prune:              true,
+      objectOverwrite:    true,
+      resultsAsObject:    false,
+    },
+    log:                  false,
+  };
+
+  this.data = {
+    signature: {
+      nodes: [],
+      type: null,
+    },
+    seed: [],
+    tree: [],
+  };
+
+  this.stats = {
+    time:     {
+      total:      0,
+      signatures: 0,
+    },
+    rows:         0,
+    sources:      0,
+  };
+
+  // set default options (below)
+  this.resetOptions();
+
+  if (options) {
+    this.options(options);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.treeize.treeize_stable.prototype" id="apidoc.module.treeize.treeize_stable.prototype">module treeize.treeize_stable.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.clearSignature" id="apidoc.element.treeize.treeize_stable.prototype.clearSignature">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>clearSignature
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearSignature = function () {
+  this.data.signature = { nodes: [], type: null };
+  this.data.signature.isFixed = false;
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.setSignature(['id', 'name:first', 'name:last', 'hobbies:name', 'hobbies:years'
+;])
+```
+
+### .getSignature()&lt;a name="getSignature" /&gt;
+
+Returns currently defined signature. _For internal use only._
+
+### .<span class="apidocCodeKeywordSpan">clearSignature</span>()&lt;a name="clearSignature" /&gt;
+
+Clears currently-defined signature if previously set via [`setSignature(row)`](#setSignature), and returns self (chainable).  This
+ is only required between data sets if signature auto-detection should be re-enabled.  It is unlikely that you will need to use
+this.
+
+### .getData()&lt;a name="getData" /&gt;
+
+Returns current data tree.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.getData" id="apidoc.element.treeize.treeize_stable.prototype.getData">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>getData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getData = function () {
+  return this.data.tree;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Treeize   = require('treeize');
+var people    = new Treeize();
+
+people.grow(peopleData);
+
+
+// ...into deep API-ready object graphs like this:
+people.<span class="apidocCodeKeywordSpan">getData</span>() == [
+{
+  name: 'John Doe',
+  age: 34,
+  pets: [
+    {
+      name: 'Rex',
+      type: 'dog',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.getOptions" id="apidoc.element.treeize.treeize_stable.prototype.getOptions">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>getOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOptions = function () {
+  return this._options;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [`toString()`](#toString) - uses `util` to return data in visually formatted object graph
+- [`log(arg1, arg2, arg3)`](#log) - console.log output of `arg1..n` when `log` option is set to `true`
+
+# API
+
+### .options([options])&lt;a name="options" /&gt;
+
+[Getter](#getOptions)/[Setter](#setOptions) for options.  If options object is passed, this is identical to [.setOptions(options
+)](#setOptions) and returns self (chainable).  If no options are passed, this is identical to [.<span class="apidocCodeKeywordSpan
+">getOptions</span>()](#getOptions) and returns current options as object.
+
+
+### .setOptions(options)&lt;a name="setOptions" /&gt;
+
+Sets options globally for the Treeize instance.  This is an alias for `.options(options)`. Default options are as follows:
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.getSignature" id="apidoc.element.treeize.treeize_stable.prototype.getSignature">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>getSignature
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSignature = function () {
+  return this.signature();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### .resetOptions(options)&lt;a name="resetOptions" /&gt;
+
+Resets all global options to [original defaults](#setOptions) and returns self (chainable).
+
+### .signature([row], [options])&lt;a name="signature" /&gt;
+
+[Getter](#getSignature)/[Setter](#setSignature) for row signatures.  If options object is passed, this is identical to [.setSignature
+(options)](#setSignature) and returns self (chainable).  If no options are passed, this is identical to [.<span class="apidocCodeKeywordSpan
+">getSignature</span>()](#getSignature) and returns currently defined signature as object.
+
+
+### .setSignature(row, [options])&lt;a name="setSignature" /&gt;
+
+Manually defines the signature for upcoming data sets from argument `row`, with optional `options`.  The row may be either in object
+ (key/value) form or flat array form (array of paths). This method is only required if sharing a single signature across multiple
+ data sources (when merging homogeneous data sets), or when the data itself has no header information (for instance, with bulk flat
+ array-of-values data).  Returns self (chainable).
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.getStats" id="apidoc.element.treeize.treeize_stable.prototype.getStats">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>getStats
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getStats = function () {
+  return this.stats;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  { 'foo': 'bar', 'logs:a': 1 },
+  { 'foo': 'bar', 'logs:a': 2 },
+  { 'foo': 'baz', 'logs:a': 3 }
+]
+*/
+```
+
+### .<span class="apidocCodeKeywordSpan">getStats</span>()&lt;a name="getStats" /&gt;
+
+Returns current growth statistics (e.g. number of sources process, number of rows, etc). _Output and format subject to change -
+use at your own risk._
+
+### .toString()&lt;a name="toString" /&gt;
+
+Typecasting a treeize instance to String or manually calling `.toString()` on it will output it visually using the `util` library
+ from node.js.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.grow" id="apidoc.element.treeize.treeize_stable.prototype.grow">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>grow
+        <span class="apidocSignatureSpan">(data, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grow = function (data, options) {
+  var opt = merge(this._options, options || {});
+
+  // chain past if no data to grow
+  if (!data || !_.isArray(data) || !data.length) {
+    return this;
+  }
+
+  this.log('OPTIONS&gt;', opt);
+
+  // locate existing signature (when sharing signatures between data sources)
+  var signature = this.getSignature();
+
+  // set data uniformity (locally) to true to avoid signature fetching on data rows
+  if (_.isArray(data[0])) {
+    opt.input.uniformRows = true;
+  }
+
+  if (!signature.nodes.length) {
+    this.log('setting signature from first row of data (auto)');
+    // set signature from first row
+    signature = this.setSignatureAuto(data[0], options).getSignature();
+
+    // remove header row in flat array data (avoids processing headers as actual values)
+    if (_.isArray(data[0])) {
+      var originalData = data;
+      data = [];
+
+      // copy data without original signature row before processing
+      _.each(originalData, function(row, index) {
+        if (index &gt; 0) {
+          data.push(row);
+        }
+      });
+    }
+  }
+
+  if (opt.output.resultsAsObject &amp;&amp; _.isArray(this.data.tree)) {
+    this.data.tree = {};
+  }
+
+  this.log('SIGNATURE&gt;', util.inspect(this.getSignature(), false, null));
+
+  this.stats.sources++;
+  var t1 = (new Date()).getTime();
+
+  _.each(data, function(row) {
+    var trails = {}; // LUT for trails (find parent of new node in trails path)
+    var trail = root = this.data.tree; // OPTIMIZATION: do we need to reset this trail for each row?
+    this.log('CURRENT TRAIL STATUS&gt;', trail);
+    var t = null;
+
+    // set initial root object path for non-array datasets
+    if (opt.output.resultsAsObject) {
+      trails[''] = trail;
+    }
+
+    if (!this.data.signature.isFixed &amp;&amp; !opt.input.uniformRows) {
+      this.log('setting signature from new row of data (auto)');
+      // get signature from each row
+      this.setSignatureAuto(row, opt);
+      this.log('SIGNATURE&gt;', util.inspect(this.getSignature(), false, null));
+    }
+
+    this.stats.rows++;
+
+    if (_.where(this.signature().nodes, { flags: true }).length) {
+      // flags detected within signature, clean attributes of row
+      _.each(row, function(value, key) {
+        if (typeof key === 'string') {
+          var clean = key.replace(/^[\*\-\+]|[\*\-\+]$/g,'');
+          if (clean !== key) {
+            this.log('cleaning key "' + key + '" and embedding as "' + clean + '"');
+            row[key.replace(/^[\*\-\+]|[\*\-\+]$/g,'')] = value; // simply embed value at clean path (if not already)
+          }
+        }
+      }, this);
+    }
+
+    _.each(this.signature().nodes, function(node) {
+      this.log('PROCESSING NODE&gt;', node);
+      var blueprint = {};
+      var blueprintExtended = {};
+
+      // create blueprint for locating existing nodes
+      _.each(node.blueprint, function(attribute) {
+        var key = (node.path ? (node.path + ':') : '') + attribute.name;
+        blueprint[attribute.name] = row[attribute.key];
+        this.log('creating attribute "' + attribute.name + '" within blueprint', row[attribute.key]);
+      }, this);
+
+      // create full node signature for insertion/updating
+      _.each(node.attributes, function(attribute) {
+        var key = (node.path ? (node.path + ':') : '') + attribute.name;
+        var value = row[attribute.key];
+
+        // insert extended blueprint attributes when not empty (or not pruning)
+        if (!opt.output.prune || (value !== null &amp;&amp; value !== undefined)) {
+          this.log('creating attribute "' + attribute.name + '" within extended blueprint', row[attribute.key]);
+          blueprintExtended[attribute.name] = row[attribute.key];
+        }
+      }, this);
+
+      this.log('EXTENDED BLUEPRINT&gt;', blueprintExtended);
+      this.log('BLUEPRINT&gt;', blueprint);
+
+      // ONLY INSERT IF NOT PRUNED
+      if (!opt.output.prune || !_.isEmpty(blueprintExtended)) {
+        // IF 0 DEPTH AND RESULTSASOBJECT, EXTEND ROOT
+        if (opt.output.resultsAsObject &amp;&amp; node.depth === 0) {
+          _.extend(trails[node.path] = trail = root, blueprintExtended);
+          this.log('extending blueprint onto r ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+];
+
+
+// ...via a dead-simple implementation:
+var Treeize   = require('treeize');
+var people    = new Treeize();
+
+people.<span class="apidocCodeKeywordSpan">grow</span>(peopleData);
+
+
+// ...into deep API-ready object graphs like this:
+people.getData() == [
+{
+  name: 'John Doe',
+  age: 34,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.log" id="apidoc.element.treeize.treeize_stable.prototype.log">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function () {
+  if (this._options.log) {
+    console.log.apply(this, arguments);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+tree.grow([
+  { 'foo': 'bar', 'logs:a': 1 },
+  { 'foo': 'bar', 'logs:a': 2 },
+  { 'foo': 'baz', 'logs:a': 3 },
+]);
+
+console.<span class="apidocCodeKeywordSpan">log</span>(tree.getData());
+
+/*
+[
+  { foo: 'bar', logs: [{ a: 1 }, { a: 2 }] },
+  { foo: 'baz', logs: [{ a: 3 }]}
+]
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.options" id="apidoc.element.treeize.treeize_stable.prototype.options">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>options
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">options = function (options) {
+  if (!options) {
+    return merge({}, this._options);
+  }
+
+  this._options = merge(this._options, options);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+- [`getStats()`](#getStats) - returns object with growth statistics
+- [`toString()`](#toString) - uses `util` to return data in visually formatted object graph
+- [`log(arg1, arg2, arg3)`](#log) - console.log output of `arg1..n` when `log` option is set to `true`
+
+# API
+
+### .<span class="apidocCodeKeywordSpan">options</span>([options])&lt;a name="options" /&gt;
+
+[Getter](#getOptions)/[Setter](#setOptions) for options.  If options object is passed, this is identical to [.setOptions(options
+)](#setOptions) and returns self (chainable).  If no options are passed, this is identical to [.getOptions()](#getOptions) and returns
+ current options as object.
+
+
+### .setOptions(options)&lt;a name="setOptions" /&gt;
+
+Sets options globally for the Treeize instance.  This is an alias for `.options(options)`. Default options are as follows:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.resetOptions" id="apidoc.element.treeize.treeize_stable.prototype.resetOptions">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>resetOptions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resetOptions = function () {
+  this._options = merge({}, this.baseOptions);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### .getOptions()&lt;a name="getOptions" /&gt;
+
+Returns the current global options (as object).
+[View example format](#setOptions)
+
+
+### .<span class="apidocCodeKeywordSpan">resetOptions</span>(options)&lt;a name="resetOptions" /&gt;
+
+Resets all global options to [original defaults](#setOptions) and returns self (chainable).
+
+### .signature([row], [options])&lt;a name="signature" /&gt;
+
+[Getter](#getSignature)/[Setter](#setSignature) for row signatures.  If options object is passed, this is identical to [.setSignature
+(options)](#setSignature) and returns self (chainable).  If no options are passed, this is identical to [.getSignature()](#getSignature
+) and returns currently defined signature as object.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.setOptions" id="apidoc.element.treeize.treeize_stable.prototype.setOptions">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>setOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setOptions = function (options) {
+  return this.options(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [`toString()`](#toString) - uses `util` to return data in visually formatted object graph
+- [`log(arg1, arg2, arg3)`](#log) - console.log output of `arg1..n` when `log` option is set to `true`
+
+# API
+
+### .options([options])&lt;a name="options" /&gt;
+
+[Getter](#getOptions)/[Setter](#setOptions) for options.  If options object is passed, this is identical to [.<span class="apidocCodeKeywordSpan
+">setOptions</span>(options)](#setOptions) and returns self (chainable).  If no options are passed, this is identical to [.getOptions
+()](#getOptions) and returns current options as object.
+
+
+### .setOptions(options)&lt;a name="setOptions" /&gt;
+
+Sets options globally for the Treeize instance.  This is an alias for `.options(options)`. Default options are as follows:
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.setSignature" id="apidoc.element.treeize.treeize_stable.prototype.setSignature">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>setSignature
+        <span class="apidocSignatureSpan">(row, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSignature = function (row, options) {
+  return this.signature(row, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### .resetOptions(options)&lt;a name="resetOptions" /&gt;
+
+Resets all global options to [original defaults](#setOptions) and returns self (chainable).
+
+### .signature([row], [options])&lt;a name="signature" /&gt;
+
+[Getter](#getSignature)/[Setter](#setSignature) for row signatures.  If options object is passed, this is identical to [.<span class="apidocCodeKeywordSpan">setSignature</span>(options)](#setSignature) and returns self (chainable).  If no options are passed, this
+ is identical to [.getSignature()](#getSignature) and returns currently defined signature as object.
+
+
+### .setSignature(row, [options])&lt;a name="setSignature" /&gt;
+
+Manually defines the signature for upcoming data sets from argument `row`, with optional `options`.  The row may be either in object
+ (key/value) form or flat array form (array of paths). This method is only required if sharing a single signature across multiple
+ data sources (when merging homogeneous data sets), or when the data itself has no header information (for instance, with bulk flat
+ array-of-values data).  Returns self (chainable).
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.setSignatureAuto" id="apidoc.element.treeize.treeize_stable.prototype.setSignatureAuto">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>setSignatureAuto
+        <span class="apidocSignatureSpan">(row, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSignatureAuto = function (row, options) {
+  return this.signature(row, options, true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (_.isArray(data[0])) {
+    opt.input.uniformRows = true;
+  }
+
+  if (!signature.nodes.length) {
+    this.log('setting signature from first row of data (auto)');
+    // set signature from first row
+    signature = this.<span class="apidocCodeKeywordSpan">setSignatureAuto</span>(data[0], options).getSignature();
+
+    // remove header row in flat array data (avoids processing headers as actual values)
+    if (_.isArray(data[0])) {
+var originalData = data;
+data = [];
+
+// copy data without original signature row before processing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.signature" id="apidoc.element.treeize.treeize_stable.prototype.signature">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>signature
+        <span class="apidocSignatureSpan">(row, options, auto)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">signature = function (row, options, auto) {
+  if (!row) {
+    return this.data.signature;
+  }
+
+  // start timer
+  var t1 = (new Date()).getTime();
+
+  // sets the signature as fixed (or not) when manually set
+  this.data.signature.isFixed = auto !== true;
+
+  var nodes         = this.data.signature.nodes = [];
+  var isArray       = _.isArray(row);
+  var opt           = merge(this._options, options || {});
+
+  this.data.signature.type = isArray ? 'array' : 'object';
+
+  _.each(row, function(value, key) {
+    // set up attribute
+    var attr        = {}
+
+    attr.key        = typeof key === 'number' ? key : key.replace(/^[\*\-\+]|[\*\-\+]$/g,'');
+    attr.fullPath   = isArray ? value : key;
+    attr.split      = attr.fullPath.split(opt.input.delimiter);
+    attr.path       = attr.split.slice(0,attr.split.length-1).join(opt.input.delimiter);
+    attr.parent     = attr.split.slice(0,attr.split.length-2).join(opt.input.delimiter).replace(/^[\*\-\+]|[\*\-\+]$/g,'');
+    attr.node       = attr.split[attr.split.length - 2];
+    attr.attr       = attr.split[attr.split.length - 1];
+
+    if (attr.attr.match(/\*/gi)) {
+      attr.attr = attr.attr.replace(/[\*]/gi,'');
+      attr.pk = true;
+    }
+
+    if (attr.pk) {
+      this.log('primary key detected in node "' + attr.attr + '"');
+    }
+
+    // set up node reference
+    var node = _.findWhere(nodes, { path: attr.path });
+    if (!node) {
+      node = { path: attr.path, attributes: [], blueprint: [] };
+      nodes.push(node);
+    }
+
+    node.isCollection = !attr.node || (opt.input.detectCollections &amp;&amp; inflection.pluralize(attr.node) === attr.node);
+
+    var collectionFlag = attr.node &amp;&amp; attr.node.match(/^[\-\+]|[\-\+]$/g);
+    if (collectionFlag) {
+      this.log('collection flag "' + collectionFlag + '" detected in node "' + attr.node + '"');
+      node.flags = true;
+      node.isCollection = attr.node.match(/^\+|\+$/g);
+      attr.node = attr.node.replace(/^[\*\-\+]|[\*\-\+]$/g,''); // clean node
+    }
+
+    node.name         = attr.node;
+    node.depth        = attr.split.length - 1;
+    node.parent       = _.initial(attr.split, 2).join(opt.input.delimiter);
+    node.attributes.push({ name: attr.attr, key: attr.key });
+    if (attr.pk) {
+      this.log('adding node to blueprint');
+      node.flags = true;
+      node.blueprint.push({ name: attr.attr, key: attr.key });
+    }
+  }, this);
+
+  // backfill blueprint when not specifically defined
+  _.each(nodes, function(node) {
+    if (!node.blueprint.length) {
+      node.blueprint = node.attributes;
+    }
+  });
+
+  nodes.sort(function(a, b) { return a.depth &lt; b.depth ? -1 : 1; });
+
+  // end timer and add time
+  var t2 = ((new Date()).getTime() - t1);
+  this.stats.time.signatures += t2;
+  this.stats.time.total += t2;
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+[View example format](#setOptions)
+
+
+### .resetOptions(options)&lt;a name="resetOptions" /&gt;
+
+Resets all global options to [original defaults](#setOptions) and returns self (chainable).
+
+### .<span class="apidocCodeKeywordSpan">signature</span>([row], [options])&lt;a name="signature" /&gt;
+
+[Getter](#getSignature)/[Setter](#setSignature) for row signatures.  If options object is passed, this is identical to [.setSignature
+(options)](#setSignature) and returns self (chainable).  If no options are passed, this is identical to [.getSignature()](#getSignature
+) and returns currently defined signature as object.
+
+
+### .setSignature(row, [options])&lt;a name="setSignature" /&gt;
+
+Manually defines the signature for upcoming data sets from argument `row`, with optional `options`.  The row may be either in object
+ (key/value) form or flat array form (array of paths). This method is only required if sharing a single signature across multiple
+ data sources (when merging homogeneous data sets), or when the data itself has no header information (for instance, with bulk flat
+ array-of-values data).  Returns self (chainable).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.treeize.treeize_stable.prototype.toString" id="apidoc.element.treeize.treeize_stable.prototype.toString">
+        function <span class="apidocSignatureSpan">treeize.treeize_stable.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function treeToString() {
+  return util.inspect(this.data.tree, false, null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+```
+
+### .getStats()&lt;a name="getStats" /&gt;
+
+Returns current growth statistics (e.g. number of sources process, number of rows, etc). _Output and format subject to change -
+use at your own risk._
+
+### .<span class="apidocCodeKeywordSpan">toString</span>()&lt;a name="toString" /&gt;
+
+Typecasting a treeize instance to String or manually calling `.toString()` on it will output it visually using the `util` library
+ from node.js.
+
+```js
+var tree = new Treeize();
+
+tree.grow(data);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
